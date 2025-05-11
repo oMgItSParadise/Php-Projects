@@ -1,0 +1,18 @@
+Kullandığım password_hash ve password_verify fonksiyonları şifrelerin güvenli bir şekilde saklanması ve doğrulanması içindir.
+
+1. password_hash :
+password_hash'te verilen düz metin şifreyi güvenli bir şekilde hash'ler.
+Varsayılan olarak bcrypt algoritmasını kullanır.
+Her hash benzersiz bir "salt" içerir bu da aynı şifrenin farklı hash'ler oluşturmasını sağlar.
+Örnek kullanım:
+$hashed_password = password_hash($sifre, PASSWORD_DEFAULT);
+
+2. password_verify:
+password_verify kullanıcı tarafından girilen düz metin şifrenin veritabanında saklanan hash ile eşleşip eşleşmediğini kontrol eder.
+Doğru eşleşme durumunda true aksi halde false döner.
+Örnek kullanım :
+if (password_verify($girilensifre, $saklananhash)) {
+// Şifre doğru
+} else {
+// Şifre yanlış
+}

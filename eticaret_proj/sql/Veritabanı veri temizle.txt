@@ -1,0 +1,13 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+UPDATE kategoriler SET üst_kategori_id = NULL WHERE üst_kategori_id IS NOT NULL;
+
+DELETE FROM sipariş_öğeleri;
+DELETE FROM siparişler;
+DELETE FROM ürünler;
+DELETE FROM kategoriler;
+DELETE FROM satıcılar;
+DELETE FROM kullanıcılar;
+DELETE FROM ülkeler;
+
+SET FOREIGN_KEY_CHECKS = 1;

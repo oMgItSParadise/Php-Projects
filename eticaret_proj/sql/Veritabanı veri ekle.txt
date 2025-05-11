@@ -1,0 +1,34 @@
+INSERT INTO ulkeler (kod, isim, kita_adi)
+VALUES 
+(1, 'Almanya', 'Avrupa'),
+(2, 'Amerika Birleşik Devletleri', 'Kuzey Amerika'),
+(3, 'Japonya', 'Asya');
+
+
+INSERT INTO kullanicilar (id, tam_ad, eposta, cinsiyet, dogum_tarihi, olusturma_tarihi, ulke_kodu, sifre)
+VALUES (1, 'Ahmet Yılmaz', 'ahmet@doe.com', 'Erkek', '1990-05-15', '2025-04-29', 1, 'admintest');
+
+INSERT INTO saticilar (id, admin_id, satici_adi, ulke_kodu, olusturma_tarihi)
+VALUES (1, 1, 'TechShop', 1, '2025-04-29');
+
+INSERT INTO kategoriler (id, kategori_adi, ust_kategori_id)
+VALUES (1, 'Elektronik', NULL),
+       (2, 'Bilgisayarlar', 1),
+       (3, 'Telefonlar', 1),
+       (4, 'Giyim', NULL),
+       (5, 'Ayakkabılar', 4);
+
+INSERT INTO urunler (id, isim, satici_id, fiyat, durum, olusturma_tarihi, kategori_id)
+VALUES (1, 'Laptop X', 1, 5000, 'Satis', '2025-04-29', 2),
+       (2, 'Telefon Y', 1, 3000, 'Satis', '2025-04-29', 3),
+       (3, 'Smartwatch Z', 1, 1500, 'Satis', '2025-04-29', 2),
+       (4, 'Tisort A', 1, 100, 'Satis', '2025-04-29', 4),
+       (5, 'Spor Ayakkabi B', 1, 250, 'Satis', '2025-04-29', 5);
+
+INSERT INTO siparisler (id, kullanici_id, durum, olusturma_tarihi)
+VALUES (1, 1, 'Tamamlandi', '2025-04-29');
+
+INSERT INTO siparis_ogeleri (siparis_id, urun_id, miktar)
+VALUES (1, 1, 1),  -- Laptop X
+       (1, 2, 2),  -- Telefon Y
+       (1, 4, 3);  -- Tisort A
