@@ -10,8 +10,8 @@ if (!isset($_SESSION['user_id'])) {
     <ul id="menuid">
       <li onclick="">Home</li>
       <li onclick="">About</li>
-      <li onclick="">Info</li>
-      <li onclick="">Contact</li>
+      <li onclick="window.location.href='sayfalar/siparislerim.php';">Siparişlerim</li>
+      <li onclick="window.location.href='sayfalar/sepet.php';">Sepetim</li>
       <li onclick="window.location.href='sayfalar/logout.php';">Çıkış Yap</li>
     </ul>
   </nav>

@@ -1,3 +1,5 @@
+USE e_ticaret;
+
 INSERT INTO ulkeler (kod, isim, kita_adi)
 VALUES 
 (1, 'Almanya', 'Avrupa'),

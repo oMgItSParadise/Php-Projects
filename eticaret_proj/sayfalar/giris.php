@@ -34,10 +34,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 header("Location: ../index.php"); // Ana sayfaya yönlendirme
                 exit();
             } else {
-                $error = "Geçersiz e-posta veya şifre."; nır
+                $error = "Geçersiz e-posta veya şifre.";
             }
         } else {
-            $error = "Geçersiz e-posta veya şifre."; nır
+            $error = "Geçersiz e-posta veya şifre.";
         }
     }
 }
